@@ -1,0 +1,228 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: hofer
+ * Date: 10.07.2017
+ * Time: 09:31
+ */
+
+
+/**
+ * Implements hook_menu().
+ */
+function bi_visual_menu()
+{
+    $items['d3/bi_visual/%'] = array(
+        'title' => '',
+        'description' => 'Different visualization.',
+        'page callback' => 'bi_visual',
+        'access callback' => TRUE,
+	'page arguments' => array(2),
+    );
+
+  $items['d3/bi/%'] = array(
+    'title' => '',
+    'description' => 'Different visualization.',
+    'page callback' => 'bi_drilldown',
+    'access callback' => TRUE,
+    'page arguments' => array(2),
+  );
+
+return $items;
+}
+
+
+
+
+function bi_visual($vid) {
+	//$type = "Disziplinen";
+	//module_load_include('inc','bi_visual','query_research_results');
+	//$result = query_research_results($type);
+
+    //add css
+    drupal_add_css(drupal_get_path('module', 'bi_visual') . '/css/bi_visual.css');
+
+	$fields = get_taxonomy_fields_on_content_type();
+
+	$links = array();
+  foreach ($fields as $vocId => $info) {
+    //dsm($info['vocabulary_name']);
+      $links[] = l($info['vocabulary_name'], 'd3/bi_visual/'.$vocId);
+
+  }
+  //dsm($links);
+  unset($links[0], $links[3],$links[5], $links[6], $links[8], $links[9], $links[10], $links[12]);
+  $type_of_visualization = array(
+    '#theme' => 'item_list',
+    '#title' => '',
+    '#items' => $links
+  );
+
+  $output = '<p>Hier können Sie sich Analysen über die im Portal vorhanden Inhalte anschauen.</p>'
+  ;
+  $output .= render($type_of_visualization);
+
+  if ($fields[$vid]) {
+    $fieldTable = $fields[$vid]['table_name'];
+    $fieldColumn = $fields[$vid]['table_tid_column_name'];
+
+    // taxonomy terms with no associated node will not be displayed
+    $result = db_query("SELECT terms.name, count(terms.name) AS Anzahl, terms.tid FROM {" . $fieldTable . "} AS fe_typ
+                INNER JOIN {taxonomy_term_data} AS terms
+				        ON " . $fieldColumn . " = terms.tid GROUP BY terms.name");
+
+
+    // field_info_instance('node', 'field_praxiseinsatz', 'forschungsergebnis');
+
+    // get all taxonomy terms of the given vocabulary
+    $tids = entity_load('taxonomy_term', FALSE, array('vid' => $fields[$vid]));
+
+
+
+    //dsm($result->fetchAll());
+    $data = array();
+    $tableRows = array();
+
+    foreach($tids as $tid => $info) {
+      $noNodes = count(taxonomy_select_nodes($tid, FALSE));
+
+      $rowArray = array();
+      $rowArray['name'] = "<a href=../bi/" . $tid . "/>" . $info->name ;
+      $rowArray['count'] = $noNodes;
+      $tableRows[] = $rowArray;
+
+      // don't display 0% entries on pie D3 chart
+      if ($noNodes > 0) {
+        $data[] = array($info->name, $noNodes, $tid);
+      }
+    }
+    //dsm($data);
+
+    //build table
+
+    $tableHeader = array(
+      'name' => t('Name'),
+      'count' => t('Count'),
+    );
+
+
+    // if there is no data (e.g. taxonomy vocabulary with no associated nodes) just display table and don't draw D3 chart
+    if (!empty($data)) {
+      $chart = array(
+        'id' => 'visualization',
+        'type' => 'piechart',
+        'rows' => $data,
+      );
+
+      $output .= d3_draw($chart);
+    }
+
+    $pivot_button = array(
+        '#prefix' => '<div id="bi_visual_pivot_button">',
+        '#suffix' => '</div>',
+        '#markup' => l(t('Pivot Table Generator'), 'taxonomy-pivot'),
+    );
+
+    //$output .= drupal_render($pivot_button);
+
+    $output .= theme('table', array('header' => $tableHeader, 'rows' => $tableRows));
+
+
+
+    //TODO Brauchen wir das noch?
+    $form['reports'] = array(
+      '#title' => t('Crust Size'),
+      '#type' => 'select',
+      '#description' => 'Select the desired pizza crust size.',
+      '#options' => array(t('--- SELECT ---'), t('10"'), t('12"'), t('16"')),
+    );
+  }
+
+  return $output;
+}
+
+function bi_drilldown($argument) {
+  $output = '';
+  if (is_int((int)$argument)) {
+
+    // use term tid instead of term name to get the correct results; e.g. term 'Sonstige' or 'Keine Angabe' are part of
+    // several vocabularies.
+    $sql_query = "SELECT title, node.nid FROM ({node} INNER JOIN {taxonomy_index} ON node.nid = taxonomy_index.nid)
+                INNER JOIN {taxonomy_term_data} ON taxonomy_index.tid = taxonomy_term_data.tid
+                WHERE taxonomy_term_data.tid = :tid";
+    $result = db_query($sql_query, array(':tid' => $argument));
+    $result = $result->fetchAll();
+    //dsm($result);
+
+    $data = array();
+    foreach ($result as $line) {
+      //array_push($data, array($line->title, 1));
+      $data[] = array($line->title, 1, $line->nid);
+    }
+
+    $tableHeader = array(
+      'name'  => t('Name'),
+      'count' => t('Count'),
+    );
+
+    $tableRows = array();
+
+    foreach ($data as $entry) {
+      $rowArray = array();
+      $rowArray['name'] = l(array_values($entry)[0], drupal_get_path_alias('node/' . (int) $entry[2]));
+      $rowArray['count'] = array_values($entry)[1];
+      array_push($tableRows, $rowArray);
+    }
+
+    $chart = array(
+      'id'   => 'visualization',
+      'type' => 'piechart',
+      'rows' => $data,
+    );
+
+    $output = d3_draw($chart);
+
+    $output .= theme('table', array('header' => $tableHeader, 'rows' => $tableRows));
+  }
+  return $output;
+}
+
+/**
+ * Returns all taxonomy term reference fields on the given content type (or on all content types if no $types is specified).
+ * The db field name, associated taxonomy vocabulary, db field table name and db field tid column are returned.
+ *
+ * @param $type
+ *   The content type machine name.
+ *
+ * @return array
+ *   Array of taxonomy term reference fields.
+ */
+function get_taxonomy_fields_on_content_type($type = array()) {
+  $fieldsTaxonomy = array();
+
+  // array of all fields and content types they are associated with
+  $fieldMap = field_info_field_map();
+
+  // filters all taxonomy reference fields on nodes of content type $type
+  $bundle = 'node';
+  foreach ($fieldMap as $field => $info) {
+    if ($info['type'] === 'taxonomy_term_reference' && array_key_exists($bundle, $info['bundles']) &&
+      (in_array($type, $info['bundles'][$bundle]) || $type === array())) {
+      $fieldInfo = field_info_field($field);
+      $fieldTableName = key($fieldInfo['storage']['details']['sql']['FIELD_LOAD_CURRENT']);
+      $vocabulary = taxonomy_vocabulary_machine_name_load($fieldInfo['settings']['allowed_values'][0]['vocabulary']);
+      $vid = $vocabulary->vid;
+
+      $fieldsTaxonomy[$vid]['name'] = $field;
+      $fieldsTaxonomy[$vid]['vocabulary_machine_name'] = $fieldInfo['settings']['allowed_values'][0]['vocabulary'];
+      $fieldsTaxonomy[$vid]['vocabulary_name'] = $vocabulary->name;
+      $fieldsTaxonomy[$vid]['vocabulary_vid'] = $vid;
+      $fieldsTaxonomy[$vid]['table_name'] = $fieldTableName;
+      $fieldsTaxonomy[$vid]['table_tid_column_name'] = $fieldInfo['storage']['details']['sql']['FIELD_LOAD_CURRENT'][$fieldTableName]['tid'];
+      $fieldsTaxonomy[$vid]['bundles'] = $fieldInfo['bundles'];
+    }
+  }
+
+  return $fieldsTaxonomy;
+}
+

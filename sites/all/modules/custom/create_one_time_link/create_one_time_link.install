@@ -1,0 +1,124 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: julien
+ * Date: 18.10.18
+ * Time: 20:30
+ */
+
+
+function create_one_time_link_schema() {
+        $schema['create_one_time_link'] = array(
+            'description' => 'The table for storing one time login links.',
+            'fields' => array(
+                'link_id' => array(
+                    'description' => 'The primary identifier for a one time link.',
+                    'type' => 'serial',
+                    'unsigned' => TRUE,
+                    'not null' => TRUE,
+                ),
+                'uid' => array(
+                    'description' => 'The uid for a one time link.',
+                    'type' => 'int',
+                    'unsigned' => TRUE,
+                    'not null' => TRUE,
+                ),
+                'timestamp' => array(
+                    'description' => 'The UNIX timestamp for a the one time link.',
+                    'type' => 'int',
+                    'unsigned' => TRUE,
+                    'not null' => TRUE,
+                    'size' => 'normal'
+                ),
+                'expire_timestamp' => array(
+                    'description' => 'The UNIX expire timestamp for a the one time link.',
+                    'type' => 'int',
+                    'unsigned' => TRUE,
+                    'not null' => TRUE,
+                    'size' => 'normal'
+                ),
+                'hashed_pass' => array(
+                    'description' => 'The rehashed password from a user for a the one time link.',
+                    'type' => 'varchar',
+                    'not null' => TRUE,
+                    'length' => 255,
+                ),
+                'redirect' => array(
+                    'description' => 'The redirect type for a the one time link.',
+                    'type' => 'varchar',
+                    'not null' => TRUE,
+                    'length' => 255,
+                )
+            ),
+            'primary key' => array('link_id'),
+        );
+
+
+        $schema['create_one_time_link_emails'] = array(
+            'description' => 'The table for storing one the email adresses and links.',
+            'fields' => array(
+                'link_email_id' => array(
+                    'description' => 'The primary identifier for a one time link.',
+                    'type' => 'serial',
+                    'unsigned' => TRUE,
+                    'not null' => TRUE),
+                'salutation' => array(
+                    'description' => 'The email address where the one time link will be sent.',
+                    'type' => 'varchar',
+                    'not null' => TRUE,
+                    'length' => 255,
+                ),
+                'title' => array(
+                    'description' => 'The email address where the one time link will be sent.',
+                    'type' => 'varchar',
+                    'not null' => TRUE,
+                    'length' => 255,
+                ),
+                'firstname' => array(
+                    'description' => 'The firstname of the person where the one time link will be sent.',
+                    'type' => 'varchar',
+                    'not null' => TRUE,
+                    'length' => 255,
+                ),
+                'surname' => array(
+                    'description' => 'The surname of the person where the one time link will be sent.',
+                    'type' => 'varchar',
+                    'not null' => TRUE,
+                    'length' => 255,
+                ),
+                'email' => array(
+                    'description' => 'The email address where the one time link will be sent.',
+                    'type' => 'varchar',
+                    'not null' => TRUE,
+                    'length' => 255,
+                ),
+                'project' => array(
+                    'description' => 'The email address where the one time link will be sent.',
+                    'type' => 'text',
+                    'size' => 'normal',
+                    'not null' => TRUE,
+                    'length' => 255,
+                ),
+                'link' => array(
+                    'description' => 'The one time link.',
+                    'type' => 'varchar',
+                    'not null' => TRUE,
+                    'length' => 255,
+                ),
+                'email_sent' => array(
+                    'description' => 'The flag if an email was sent.',
+                    'type' => 'varchar',
+                    'not null' => TRUE,
+                    'length' => 255,
+                ),
+            ),
+            'primary key' => array('link_email_id')
+        );
+
+
+    return $schema;
+}
+
+function create_one_time_link_uninstall() {
+    drupal_uninstall_schema('create_one_time_link');
+}

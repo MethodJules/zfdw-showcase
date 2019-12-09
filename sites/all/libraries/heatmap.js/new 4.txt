@@ -1,0 +1,131 @@
+produktvserver geo feld
+
+
+Drupal.settings.leaflet[0].lMap.eachLayer(function(layer){
+    console.log('asd');
+});
+
+Drupal.settings.leaflet[0].lMap
+
+L.control.layers(baseLayers, overlays).addTo(Drupal.settings.leaflet[0].lMap);
+http://leafletjs.com/examples/layers-control/example.html
+
+var heatmap = h337.create({
+  container: $('.leaflet-container')[0]
+});
+
+
+
+Drupal.settings.leaflet[0].lMap.removeLayer(heatmapLayer)
+
+var cfg = {
+  // radius should be small ONLY if scaleRadius is true (or small radius is intended)
+  // if scaleRadius is false it will be the constant radius used in pixels
+  "radius": 0.3,
+  "minOpacity": 0,
+  "maxOpacity": .5, 
+    "blur": 1,
+  // scales the radius based on map zoom
+  "scaleRadius": true, 
+  // if set to false the heatmap uses the global maximum for colorization
+  // if activated: uses the data maximum within the current map boundaries 
+  //   (there will always be a red spot with useLocalExtremas true)
+  "useLocalExtrema": true,
+  // which field name in your data represents the latitude - default "lat"
+  latField: 'lat',
+  // which field name in your data represents the longitude - default "lng"
+  lngField: 'lng',
+  // which field name in your data represents the data value - default "value"
+  valueField: 'count'
+};
+
+var heatmapLayer = new HeatmapOverlay(cfg);
+
+
+var testData = {
+  max: 100,
+  data: Drupal.settings.map_filters.heat
+};
+
+heatmapLayer.setData(testData);
+
+Drupal.settings.leaflet[0].lMap.addLayer(heatmapLayer)
+
+
+
+Drupal.settings.leaflet[0].lMap.removeLayer(heat)
+
+var cfg = {
+	// the minimum opacity the heat will start at
+    minOpacity: 0.7,
+	// zoom level where the points reach maximum intensity (as intensity scales with zoom), equals maxZoom of the map by default
+    maxZoom: 0.0,
+	// maximum point intensity, 1.0 by default
+    max: 5.0,
+	// radius of each "point" of the heatmap, 25 by default
+    radius: 30,
+	// amount of blur, 15 by default
+    blur: 20,
+	// color gradient config, e.g. {0.4: 'blue', 0.65: 'lime', 1: 'red'}
+    //gradient: {0.0: 'navy', 0.25: 'blue', 0.5: 'green', 0.75: 'yellow', 1: 'red'}
+
+};
+
+var heat = L.heatLayer(Drupal.settings.map_filters.heatData, cfg)
+
+var lMap = Drupal.settings.leaflet[0].lMap;
+L.control.layers({}, {'Heatmap' : heat}).addTo(lMap);
+lMap.on('overlayadd', function(overlay) {
+if(overlay.name === 'Heatmap') {
+$('.leaflet-marker-pane, .leaflet-shadow-pane').hide();
+
+}
+});
+
+lMap.on('overlayremove', function(overlay) {
+if(overlay.name === 'Heatmap') {
+$('.leaflet-marker-pane, .leaflet-shadow-pane').show();
+
+}
+});
+
+
+
+Drupal.settings.leaflet[0].lMap.addLayer(heat)
+
+
+var latlngs = [
+    [
+		[53.566780000000, 9.983080000000],
+		[53.108580000000, 8.851620000000]
+	],
+	[
+		[53.566780000000, 9.983080000000],
+		[50.082632100000, 8.626461700000]
+	],
+	[
+		[53.566780000000, 9.983080000000],
+		[52.489943300000, 13.375690100000]
+	],
+];
+
+
+
+var lMap = Drupal.settings.leaflet[0].lMap;
+var multiPolyline = L.multiPolyline(Drupal.settings.map_filters.polylinesData, {color: 'red'});
+L.control.layers({}, {'Polyline' : multiPolyline}).addTo(lMap);
+
+
+
+
+{"lat":"53.566780000000","lng":"9.983080000000"}
+
+
+array (
+  'lat' => '53.108580000000',
+  'lng' => '8.851620000000',
+)
+
+
+field_projektpartner
+field_umpartner

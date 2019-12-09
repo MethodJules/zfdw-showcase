@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Particles.js library wrapper.
+ */
+
+/**
+ * Implements hook_libraries_info().
+ */
+function particlesjs_libraries_info() {
+  $libraries['particles.js.js'] = array(
+    'name' => 'particles.js.js',
+    'vendor url' => 'https://vincentgarreau.com/particles.js.js/',
+    'download url' => 'https://github.com/VincentGarreau/particles.js.js/releases',
+    'version arguments' => array(
+      'file' => 'particles.js.js',
+      'pattern' => '/v([0-9\.]+)/',
+      'lines' => 150,
+    ),
+    'files' => array(
+      'js' => array('particles.js.js'),
+    ),
+  );
+  return $libraries;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function particlesjs_menu() {
+  $items = array();
+
+  $items['admin/config/user-interface/particlesjs'] = array(
+    'title' => 'Particles.js',
+    'description' => 'Particles.js settings.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('particlesjs_admin_form'),
+    'access arguments' => array('access administration pages'),
+    'file' => 'particlesjs.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_init().
+ */
+function particlesjs_init() {
+  if (variable_get('particlesjs_load')) {
+    libraries_load('particles.js.js');
+  }
+}

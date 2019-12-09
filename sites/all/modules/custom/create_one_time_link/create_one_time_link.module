@@ -1,0 +1,65 @@
+<?php
+//Form
+module_load_include('inc', 'create_one_time_link', 'create_one_time_link.form');
+//Create Link
+module_load_include('inc', 'create_one_time_link', 'create_one_time_link.create_link');
+//Mail Handler
+module_load_include('inc', 'create_one_time_link', 'create_one_time_link.mail');
+//Helper
+module_load_include('inc', 'create_one_time_link', 'create_one_time_link.helper');
+
+
+
+function create_one_time_link_menu() {
+
+$items['one_time_link/create'] = array(
+    'title' => t('Invitation Administration'),
+	'type' => MENU_NORMAL_ITEM,
+	'menu_name' => 'main-menu',
+	'page callback' => 'create_one_time_link_page',
+	//'page arguments' => array('form_create_link'),
+	'access callback' => 'create_one_time_link_user_has_role',
+    'access arguments' => array('administrator','Portalprojekt'),
+    'file' => 'create_one_time_link.page.inc'
+	
+	
+);
+
+
+    $items['one_time_link/send_email/%'] = array(
+        'page callback' => 'create_one_time_link_email',
+        'access callback' => 'create_one_time_link_user_has_role',
+        'access arguments' => array('administrator','Portalprojekt'),
+        'page arguments' => array(2),
+        //'access arguments' => TRUE,
+        'title' => t('Send Email'),
+        'file' => 'create_one_time_link.mail.inc'
+
+
+    );
+
+
+return $items;
+
+}
+
+function create_one_time_link_user_has_role() {
+    global $user;
+    $roles = func_get_args();
+    foreach ($roles as $role) {
+        if (in_array($role, $user->roles)) {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+
+
+
+
+
+
+
+
+

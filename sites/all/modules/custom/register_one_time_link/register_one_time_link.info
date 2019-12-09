@@ -1,0 +1,4 @@
+name = Register One Time Link
+description = Register a one time link
+core = 7.x
+dependencies[] = create_one_time_link

@@ -1,0 +1,231 @@
+<?php
+
+
+
+
+
+
+/**
+ * @file
+ * Automatically adds morphological box exposed filters to map views.
+ */
+function map_filters_views_pre_view(&$view, &$display_id, &$args) {
+
+  // The search results map settings of the maps view
+  if ($view->name === 'research' && $display_id === 'map_research') {
+
+    // Get morphological box taxonomy vocabularies
+    $query = "SELECT taxonomy_vocabulary.name AS vocabulary_name, taxonomy_vocabulary.machine_name AS vocabulary_machinename,
+              taxonomy_vocabulary.vid AS vocabulary_vid, taxonomy_vocabulary.weight AS vocabulary_weight
+            FROM {taxonomy_vocabulary} taxonomy_vocabulary
+            WHERE taxonomy_vocabulary.machine_name LIKE 'tax_morph_%'
+            ORDER BY vocabulary_weight ASC, vocabulary_name ASC;";
+    $result = db_query($query);
+
+    // Get existing view filters
+    $filters = $view->display_handler->get_option('filters');
+
+    // Get the central content type of the view
+    $contentType = reset($view->display['map_research']->display_options['filters']['type']['value']);
+
+    // Get all taxonomy reference fields and associated vocabularies of the content type
+    $fieldInfo = field_info_instances(node, $contentType);
+    foreach ($fieldInfo as $fieldName => $field) {
+      $fieldIdInfo = field_info_field_by_id($field['field_id']);
+      $fieldInfo[$fieldName] = $fieldIdInfo['settings']['allowed_values'][0]['vocabulary'];
+    }
+
+    // Add all morphological box vocabularies as exposed filters
+    // TODO filter by terms of associated project, too?
+    foreach ($result as $vocabulary) {
+      $vocMachineName = $vocabulary->vocabulary_machinename;
+      $vocLabel = $vocabulary->vocabulary_name;
+
+      if (empty($filters[$vocMachineName]) && in_array($vocMachineName, $fieldInfo)) {
+        // There is no vid filter so we have to add it
+        $view->add_item(
+          $view->current_display,
+          'filter',
+          'taxonomy_index',
+          'tid',
+          array(
+            'relationship' => 'none',
+            'group_type' => 'group',
+            'ui_name' => '',
+            'operator' => 'or',
+            'value' => '',
+            'group' => '1',
+            'exposed' => true,
+            'expose' =>
+              array (
+                'label' => $vocLabel,
+                'description' => '',
+                'use_operator' => 0,
+                'operator_label' => '',
+                'identifier' => $vocMachineName,
+                'required' => 0,
+                'remember' => 0,
+                'multiple' => 0,
+                'reduce' => false,
+              ),
+            'is_grouped' => false,
+            'group_info' =>
+              array (
+                'label' => '',
+                'description' => '',
+                'identifier' => '',
+                'optional' => true,
+                'widget' => 'select',
+                'multiple' => false,
+                'remember' => 0,
+                'default_group' => 'All',
+                'default_group_multiple' =>
+                  array (
+                  ),
+                'group_items' =>
+                  array (
+                  ),
+              ),
+            'reduce_duplicates' => 0,
+            'type' => 'select',
+            'limit' => true,
+            'vocabulary' => $vocMachineName,
+            'hierarchy' => 0,
+            'error_message' => 1,
+          )
+        );
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_leaflet_map_prebuild_alter().
+ * Adds a heatmap overlay layer to leaflet maps.
+ */
+function map_filters_leaflet_map_prebuild_alter(&$settings) {
+  // TODO register as a proper library and check for existence hook_libraries_info()
+  drupal_add_js('sites/all/libraries/leaflet-heat/leaflet-heat.js', 'file');
+
+  // Convert coordinates of all leaflet markers to leaflet-heat compatible format.
+  $heatData = array();
+  foreach ($settings['features'] as $location) {
+    $coordinates = array($location['lat'], $location['lon']);
+    array_push($heatData, $coordinates);
+  }
+
+  // Add leaflet-heat compatible coordinates to Drupal environment (Drupal.settings.map_filters.heatData)
+  drupal_add_js(array('map_filters' => array('heatData' => null)), 'setting');
+  drupal_add_js(array('map_filters' => array('heatData' => $heatData)), 'setting');
+
+
+  // Add JS to add heatmap layer to the current leaflet map
+  drupal_add_js(drupal_get_path('module', 'map_filters') .'/js/map_control.js', array('scope' => 'footer', 'weight' => 100, 'cache' => FALSE));
+
+}
+
+
+/**
+ * Implements hook_views_post_execute().
+ * Compute coordinates of projects and their associated partners to connect them by lines on leaflet maps.
+ */
+function map_filters_views_post_execute(&$view) {
+  if ($view->name === 'research' && $view->current_display === 'page') {
+
+    $projects = array();
+    $projectInfo = array();
+    $projectPartners = array();
+    $polyLines = array();
+    $linemap = array();
+
+    // Extract project and partner coordinates
+    foreach ($view->result as $r) {
+      if ($r->node_type === 'projekt') {
+        $geoData = $r->field_field_location[0]['raw'];
+        if (!empty($geoData)) {
+          $projects[$r->nid][] = array('lat' => $geoData['lat'], 'lng' => $geoData['lon'], 'hash' => $geoData['geohash']);
+          $projectInfo[$r->nid] = $r->node_title;
+        }
+      } else if ($r->node_type === 'umsetzungspartner' || $r->node_type === 'projektpartner') {
+        $geoData = $r->field_field_location[0]['raw'];
+        $projectPartners[$r->nid] = array('lat' => $geoData['lat'], 'lng' => $geoData['lon']);
+      }
+    }
+
+    // Build a cluster of locations for every project
+    $color = '#000000';
+    $projectNumber = 0; // Counts the number of projects with more than one location
+    foreach ($projects as $nid => $locations) {
+
+      // Connect all locations of a single project with each another (complete graph)
+      $locationsCount = count($locations);
+      for ($i = 0; $i < $locationsCount - 1; $i++) {
+        for ($j = $i + 1; $j < $locationsCount; $j++) {
+          if ($locations[$i] !== $locations[$j]) {
+
+            // Assign a color to projects with at least 2 locations at different coordinates (connection line will be)
+            if (!isset($projects[$nid]['color'])) {
+              $color =_map_filters_get_color($projectNumber);
+              $projects[$nid]['color'] = $color;
+              $projectNumber++;
+            }
+
+            $polyLines[$nid]['polyline'][] = array($locations[$i], $locations[$j]);
+            $polyLines[$nid]['color'] = $color;
+            $polyLines[$nid]['project'] = $projectInfo[$nid];
+
+            // Ensure there is only one line between any two locations (independent of their direction)
+            $geohash = $locations[$i]['hash'] . $locations[$j]['hash'];
+            $geohashReverse = $locations[$j]['hash'] . $locations[$i]['hash'];
+
+            // If there are lines drawn on top of each, other combine their popup information.
+            if (array_key_exists($geohash, $linemap) || array_key_exists($geohashReverse, $linemap)) {
+              if (!empty($linemap[$geohash]['projects'])) {
+                $linemap[$geohash]['projects'] = $linemap[$geohash]['projects'] . '<br /><li>' . $projectInfo[$nid] . '</li>';
+              } else {
+                $linemap[$geohashReverse]['projects'] = $linemap[$geohashReverse]['projects'] . '<br /><li>' . $projectInfo[$nid] . '</li>';
+              }
+            } else {
+              $linemap[$geohash]['projects'] = '<li>' . $projectInfo[$nid] . '</li>';
+              $linemap[$geohash]['polyline'] = array($locations[$i], $locations[$j]);
+            }
+          }
+
+        }
+      }
+
+      // TODO how to connect a cluster to other project location clusters (field_verknuepfte_projekte)?
+      // Connect one location of each cluster with one another? Which ones?
+      // Connect all locations of referenced projects? Potentially many connections.
+    }
+
+    // Make variables available in JS.
+    $polyLines = array_values($polyLines);
+    $linemap = array_values($linemap);
+    drupal_add_js(array('map_filters' => array('polylinesData' => $polyLines)), 'setting');
+    drupal_add_js(array('map_filters' => array('topPolylines' => $linemap)), 'setting');
+  }
+}
+
+/**
+ * Returns a color hex code from a predefined palette. If the palette is exhausted random colors are generated.
+ *
+ * @param int $number
+ * @return string
+ *   A color HEX code.
+ */
+function _map_filters_get_color($number) {
+  // color palette
+  $colors = array('#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6',
+    '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1',
+    '#000075', '#808080',);
+
+  // Return a color from the palette, if it is not exhausted.
+  if ($number < count($colors)) {
+    return $colors[$number];
+  }
+
+  // Otherwise generate a new random color
+  return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+}

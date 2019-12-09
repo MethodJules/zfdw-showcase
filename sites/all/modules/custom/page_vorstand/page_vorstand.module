@@ -1,0 +1,31 @@
+<?php
+
+function page_vorstand_menu() {
+    $items = array();
+
+    $items['vorstand'] = array(
+        'title' => 'Vorstand',
+        'page callback' => 'show_vorstand_page',
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    return $items;
+}
+
+function show_vorstand_page() {
+    global $base_url;
+    $img_path = $base_url . '/' . drupal_get_path('module', 'page_vorstand');
+    $html = '<p>Hier kommt der Vorstand hin</p>';
+    $html .= '<img src="' .  $img_path . '/img_avatar.png"' . ' alt="Avatar" style="width:200px; border-radius: 50%;">';
+    $html .= '<img src="' .  $img_path . '/img_avatar.png"' . ' alt="Avatar" style="width:200px; border-radius: 50%;">';
+    $html .= '<img src="' .  $img_path . '/img_avatar.png"' . ' alt="Avatar" style="width:200px; border-radius: 50%;">';
+    $html .= '<img src="' .  $img_path . '/img_avatar.png"' . ' alt="Avatar" style="width:200px; border-radius: 50%;">';
+    $html .= '<img src="' .  $img_path . '/img_avatar.png"' . ' alt="Avatar" style="width:200px; border-radius: 50%;">';
+    $html .= '<img src="' .  $img_path . '/img_avatar.png"' . ' alt="Avatar" style="width:200px; border-radius: 50%;">';
+
+    return array(
+        '#markup' => $html,
+    );
+
+}

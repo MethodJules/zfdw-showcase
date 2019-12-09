@@ -1,0 +1,20 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: julien
+ * Date: 20.10.18
+ * Time: 08:59
+ */
+
+
+function register_one_time_link_menu() {
+    $items['zfdw-one-time-login/%/%/%/%'] = array(
+        'page callback' => 'register_one_time_link_register',
+        'access callback' => TRUE,
+        'page arguments' => array(1,2,3,4),
+        'file' => 'register_one_time_link.register.inc',
+
+    );
+
+    return $items;
+}

@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1e7e5c58-ffa5-450d-a3ee-33945421f1cb" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/sites/all/modules/custom/bi_visual/css/bi_visual.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/bi_visual/bi_visual.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/bi_visual/bi_visual.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/indekonews/helperfunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/indekonews/helperfunctions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_newsletter_event.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_newsletter_event.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPub.ExampleSimple.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPub.ExampleSimple.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPub.HtmlEntities.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPub.HtmlEntities.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPub.NCX.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPub.NCX.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPub.OPF.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPub.OPF.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPub.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPub.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPubChapterSplitter.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/EPubChapterSplitter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/Logger.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/Logger.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/Zip.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/Zip.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/lib.uuid.LICENCE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/lib.uuid.LICENCE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/lib.uuid.manual.html" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/lib.uuid.manual.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/lib.uuid.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/lib.uuid.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/nodeMerge.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/nodeMerge.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/nodeMerge.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/nodeMerge.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/nodeMerge.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/nodeMerge.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/EPub.Example1.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/EPub.Example1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/EPub.Example2.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/EPub.Example2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/EPub.Example3.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/EPub.Example3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/EPub.ExampleImg.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/EPub.ExampleImg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/512x700.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/512x700.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/512x700_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/512x700_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/512x700_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/512x700_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/512x700_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/512x700_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/DemoInlineImage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/DemoInlineImage.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/cover-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/nodeMerge/phpEpub/demo/cover-image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/node_relation/node_relation.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/node_relation/node_relation.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/node_relation/node_relation.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/node_relation/node_relation.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/node_relation/node_relation_visualize.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/node_relation/node_relation_visualize.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/actions/membership_delete.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/actions/membership_delete.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/actions/set_state.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/actions/set_state.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/actions/user_roles.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/actions/user_roles.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_add_fields.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_add_fields.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_content.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_content.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_group.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_group.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_ogur.migrate.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_ogur.migrate.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_ogur_roles.migrate.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_ogur_roles.migrate.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_user.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7000/og_user.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7200/og_og_membership.migrate.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7200/og_og_membership.migrate.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7200/og_roles.migrate.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7200/og_roles.migrate.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7200/og_user_roles.migrate.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/7200/og_user_roles.migrate.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/og.migrate.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/og.migrate.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/plugins/destinations/og_membership.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/migrate/plugins/destinations/og_membership.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/og.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/og.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/og.exception.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/og.exception.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/og.field.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/og.field.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/og.membership.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/og.membership.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/og.membership_type.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/og.membership_type.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/og_features_role.features.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/og_features_role.features.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_group_audience_state.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_group_audience_state.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_group_permissions.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_group_permissions.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_og_membership_link_delete.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_og_membership_link_delete.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_og_membership_link_edit.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_og_membership_link_edit.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_prerender_list.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_prerender_list.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_user_roles.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_field_user_roles.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_filter_group_audience_state.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_filter_group_audience_state.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_filter_user_roles.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_filter_user_roles.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_relationship.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_relationship.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_relationship_membership_roles.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_handler_relationship_membership_roles.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_plugin_argument_default_user_groups.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_plugin_argument_default_user_groups.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_plugin_argument_validate_group.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/handlers/og_plugin_argument_validate_group.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/og.views.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/og.views.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/includes/views/og.views_default.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/includes/views/og.views_default.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og.api.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og.api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og.info.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og.info.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og.rules.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og.rules.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og.rules_defaults.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og.rules_defaults.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_access/og_access.api.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_access/og_access.api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_access/og_access.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_access/og_access.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_access/og_access.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_access/og_access.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_access/og_access.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_access/og_access.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_access/og_access.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_access/og_access.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_context/includes/views/handlers/og_context_plugin_access_og_perm.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_context/includes/views/handlers/og_context_plugin_access_og_perm.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_context/includes/views/handlers/og_context_plugin_argument_default_group_context.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_context/includes/views/handlers/og_context_plugin_argument_default_group_context.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_context/includes/views/og_context.views.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_context/includes/views/og_context.views.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.api.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_context/og_context.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.features.field_base.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.features.field_base.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.features.field_instance.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.features.field_instance.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.features.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.features.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.pages_default.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.pages_default.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.rules_defaults.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/og_example.rules_defaults.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/plugins/entityreference/selection/OgExampleSelectionHandler.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/plugins/entityreference/selection/OgExampleSelectionHandler.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_example/plugins/entityreference/selection/og_example.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_example/plugins/entityreference/selection/og_example.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_field_access/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_field_access/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_field_access/og_field_access.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_field_access/og_field_access.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_field_access/og_field_access.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_field_access/og_field_access.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_field_access/og_field_access.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_field_access/og_field_access.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_register/og_register.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_register/og_register.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_register/og_register.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_register/og_register.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/css/og_ui-rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/css/og_ui-rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/css/og_ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/css/og_ui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/migrate/7000/add_field.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/migrate/7000/add_field.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/migrate/7000/populate_field.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/migrate/7000/populate_field.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/migrate/7000/set_roles.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/migrate/7000/set_roles.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/views/handlers/og_ui_handler_area_og_membership_overview.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/views/handlers/og_ui_handler_area_og_membership_overview.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/views/og_ui.views.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/views/og_ui.views.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/views/og_ui.views_default.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/includes/views/og_ui.views_default.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.admin.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.admin.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.api.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.pages.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.pages.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.test" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/og_ui.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/plugins/content_types/membership_links/membership_links.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/plugins/content_types/membership_links/membership_links.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/scripts/generate-og-ui-d6-content.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/scripts/generate-og-ui-d6-content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/og_ui/tests/drupal-6.og-ui.database.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/og_ui/tests/drupal-6.og-ui.database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/access/og_is_node_group.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/access/og_is_node_group.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/access/og_is_node_group_content.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/access/og_is_node_group_content.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/access/og_member.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/access/og_member.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/access/og_perm.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/access/og_perm.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/content_types/node_create_links/node_create_links.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/content_types/node_create_links/node_create_links.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/behavior/OgBehaviorHandler.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/behavior/OgBehaviorHandler.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/behavior/OgWidgetHandler.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/behavior/OgWidgetHandler.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/behavior/og_behavior.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/behavior/og_behavior.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/behavior/og_widget.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/behavior/og_widget.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/selection/OgSelectionHandler.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/selection/OgSelectionHandler.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/selection/og.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/entityreference/selection/og.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/plugins/relationships/og_membership_from_group_and_user.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/plugins/relationships/og_membership_from_group_and_user.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/scripts/generate-og-d6-content.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/scripts/generate-og-d6-content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/scripts/generate-og-d7-content-update-7001.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/scripts/generate-og-d7-content-update-7001.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/tests/drupal-6.og.database.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/tests/drupal-6.og.database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/tests/og-7.x-1.x.database.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/tests/og-7.x-1.x.database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/tests/og_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/tests/og_test.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/og/tests/og_test.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/og/tests/og_test.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/archive.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/archive.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/argument_selector.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/argument_selector.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/book.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/book.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/change_owner.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/change_owner.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/delete.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/delete.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/modify.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/modify.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/script.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/script.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/user_cancel.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/user_cancel.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/user_roles.action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions/user_roles.action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions_permissions.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions_permissions.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions_permissions.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/actions_permissions.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/css/modify.action.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/css/modify.action.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/css/views_bulk_operations.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/css/views_bulk_operations.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/js/views_bulk_operations.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/js/views_bulk_operations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/action.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/action.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/action.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/action.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/base.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/base.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/rules_component.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/rules_component.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/rules_component.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/plugins/operation_types/rules_component.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views/views_bulk_operations.views.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views/views_bulk_operations.views.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views/views_bulk_operations_handler_field_operations.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views/views_bulk_operations_handler_field_operations.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.api.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.drush.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.drush.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.install" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.rules.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/views_bulk_operations/views_bulk_operations.rules.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/BI.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/BI.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/Fokus.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/Fokus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/Meetup.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/Meetup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/Metapher.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/Metapher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/News.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/News.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/Vernetzung.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/Vernetzung.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/slideshow_wk/WK_ZfDW_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/slideshow_wk/WK_ZfDW_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/slideshow_wk/W_Digitaler_Wandel_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/slideshow_wk/W_Digitaler_Wandel_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/slideshow_wk/W_Digitaler_Wandel_1_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/slideshow_wk/W_Digitaler_Wandel_1_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/flexslider_full/public/slideshow_wk/WK_ZfDW_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/flexslider_full/public/slideshow_wk/WK_ZfDW_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/flexslider_full/public/slideshow_wk/W_Digitaler_Wandel_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/flexslider_full/public/slideshow_wk/W_Digitaler_Wandel_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/flexslider_full/public/slideshow_wk/W_Digitaler_Wandel_1_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/flexslider_full/public/slideshow_wk/W_Digitaler_Wandel_1_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/BI.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/BI.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/Fokus.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/Fokus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/Meetup.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/Meetup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/Metapher.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/Metapher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/News.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/News.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/Vernetzung.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/Vernetzung.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/slideshow_wk/WK_ZfDW_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/slideshow_wk/WK_ZfDW_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/slideshow_wk/W_Digitaler_Wandel_1_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/thumbnail/public/slideshow_wk/W_Digitaler_Wandel_1_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/BI.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/BI.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/Fokus.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/Fokus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/Meetup.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/Meetup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/Metapher.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/Metapher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/News.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/News.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/modules/image/sample.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/uhiportal_slider_image/public/modules/image/sample.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/wissenkarte/public/slideshow_wk/WK_ZfDW_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/wissenkarte/public/slideshow_wk/WK_ZfDW_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/wissenkarte/public/slideshow_wk/W_Digitaler_Wandel_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/wissenkarte/public/slideshow_wk/W_Digitaler_Wandel_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/default/files/styles/wissenkarte/public/slideshow_wk/W_Digitaler_Wandel_1_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/files/styles/wissenkarte/public/slideshow_wk/W_Digitaler_Wandel_1_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_dumps/20170215_uhiportal.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_dumps/20170215_uhiportal.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_dumps/20180217_uhiportal.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_dumps/20180217_uhiportal.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_dumps/20180218_uhiportal.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_dumps/20180218_uhiportal.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_dumps/20180218_uhiportal_1942.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_dumps/20180218_uhiportal_1942.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_dumps/20180218_uhiportal_2154.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_dumps/20180218_uhiportal_2154.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_dumps/20180219_uhiportal.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_dumps/20180219_uhiportal.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uhiportal.sql" beforeDir="false" afterPath="$PROJECT_DIR$/uhiportal.sql" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DrupalConfiguration" enabled="true" version="7">
+    <drupalPath>C:\Users\hofer\docker\drupal\uhiportal</drupalPath>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-794686846">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="2" />
+          <entry key="inc" value="1" />
+          <entry key="module" value="2" />
+          <entry key="php" value="1" />
+          <entry key="png" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="2" />
+          <entry key="Image" value="1" />
+          <entry key="PHP" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="46" />
+          <entry key="inc" value="20" />
+          <entry key="module" value="357" />
+          <entry key="php" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="46" />
+          <entry key="PHP" value="388" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/taxonomy_pivot/taxonomy_pivot.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-495" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/taxonomy_pivot/taxonomy_pivot.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/bi_visual/bi_visual.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="133" column="3" lean-forward="true" selection-start-line="133" selection-start-column="3" selection-end-line="133" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/bi_visual/css/bi_visual.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>shopping</find>
+      <find>#block-block-2</find>
+      <find>#block-block-1</find>
+      <find>class</find>
+      <find>logo</find>
+      <find>Vorsch</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/sites/all/themes/adaptivetheme/indeko7/css/global.atlas.css" />
+        <option value="$PROJECT_DIR$/sites/all/themes/adaptivetheme/indeko7/css/global.styles.css" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews.install" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_newsletter_sceleton.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_newsletter_preview.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/indekonews/helperfunctions.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_newsletter_event.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/bi_visual/css/bi_visual.css" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/bi_visual/bi_visual.module" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/sites/all/libraries/chosen/package.json" />
+      <path value="$PROJECT_DIR$/sites/all/libraries/leaflet-heatmap/package.json" />
+      <path value="$PROJECT_DIR$/sites/all/libraries/leaflet_markercluster/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1906" />
+    <option name="y" value="44" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="uhiportal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uhiportal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uhiportal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uhiportal" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uhiportal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uhiportal" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uhiportal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uhiportal" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uhiportal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uhiportal" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uhiportal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uhiportal" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="bi_visual" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uhiportal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uhiportal" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="taxonomy_pivot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uhiportal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uhiportal" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="taxonomy_pivot" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e7e5c58-ffa5-450d-a3ee-33945421f1cb" name="Default" comment="" />
+      <created>1517162463108</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1517162463108</updated>
+      <workItem from="1517162464603" duration="6763000" />
+      <workItem from="1517170302793" duration="1049000" />
+      <workItem from="1517171369888" duration="11522000" />
+      <workItem from="1517203046894" duration="599000" />
+      <workItem from="1517840041898" duration="9142000" />
+      <workItem from="1518280308182" duration="66000" />
+      <workItem from="1518596412008" duration="1072000" />
+      <workItem from="1533718484333" duration="236000" />
+      <workItem from="1533752649283" duration="2519000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="32968000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1985" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.34414226" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/adaptivetheme/indeko7/css/global.base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/adaptivetheme/indeko7/css/global.styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="2557" column="54" selection-start-line="2557" selection-start-column="54" selection-end-line="2557" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/adaptivetheme/indeko7/css/global.atlas.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/form_meetup/form_meetup_database.inc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/form_meetup/form_meetup.info">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/form_meetup/form_meetup.install">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/form_meetup/form_meetup.events.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-671" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/form_meetup/form_meetup.module">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/interestedGroups/interestedGroups.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/interestedGroups/interestedGroups.install">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/interestedGroups/interestedGroups.info">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_admin_functions.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="793">
+          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_newsletter_user.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/news_trigger/news_trigger.install">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_newsletter_project.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/news_trigger/news_trigger.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_newsletter_preview.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_newsletter_sceleton.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1654">
+          <caret line="170" column="37" lean-forward="true" selection-start-line="170" selection-start-column="37" selection-end-line="170" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews.generator.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="224" column="49" selection-start-line="224" selection-start-column="49" selection-end-line="224" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/indekonews/indekonews_newsletter_event.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/indekonews/helperfunctions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/taxonomy_pivot/taxonomy_pivot.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-495" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/taxonomy_pivot/images/viewmag.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/taxonomy_pivot/taxonomy_pivot.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/bi_visual/css/bi_visual.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/bi_visual/bi_visual.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="133" column="3" lean-forward="true" selection-start-line="133" selection-start-column="3" selection-end-line="133" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
