@@ -621,3 +621,24 @@ header[role=banner],
 .element-hidden {
   display: none;
 }
+
+/* basic calendard blocks fixes */
+.block-veranstaltungen-block-1 h3 {
+  display: inline;
+}
+.block-veranstaltungen-block-1 a {
+  background-image: none!important;
+  padding-right: 0!important;
+}
+.date-nav {
+  padding-bottom: 0.5em;
+}
+.view-veranstaltungen ul {
+  list-style-type: none;
+  margin: 0!important;
+  padding: 0 0 0 5px!important;
+}
+.view-veranstaltungen li {
+  list-style-type: none;
+  margin: 0 0 1em !important;
+}
