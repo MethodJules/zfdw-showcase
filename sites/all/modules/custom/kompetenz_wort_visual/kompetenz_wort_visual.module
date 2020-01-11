@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_menu
+ */
+function kompetenz_wort_visual_menu()
+{
+    $items['kompetenzwoerter'] = array(
+        'title' => '',
+        'description' => 'Kompetenzwoerter',
+        'page callback' => 'show_network',
+        'access callback' => TRUE,
+    );
+    return $items;
+}
+
+function show_network() {
+    $network_chart = array(
+        'id' => 'visualization',
+        'type' => 'kompetenz_words',
+    );
+
+    return d3_draw($network_chart);
+}

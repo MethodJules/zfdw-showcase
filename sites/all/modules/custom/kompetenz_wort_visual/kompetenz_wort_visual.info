@@ -1,0 +1,5 @@
+name = kompetenz_wort_visual
+description = Visualisiert Kompetenzwoerter die im Body von Projekt stehen
+core = 7.x
+
+dependencies[] = d3
