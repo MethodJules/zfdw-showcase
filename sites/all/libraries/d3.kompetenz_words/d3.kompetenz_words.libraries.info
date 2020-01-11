@@ -1,0 +1,4 @@
+name = Kompetenz Woerter Visualisierung
+description = creates force directed charts with d3
+files[js][] = d3_kompetenz_words.js
+version = 0.1
