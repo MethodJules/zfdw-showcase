@@ -17,7 +17,92 @@
         var linkDistance=200;
         div = (settings.id) ? settings.id : 'visualization';
 
-        var dataset = { nodes: [{name:"www.iai-bochum.de"},{name:"kompetenzentwicklung"},{name:"www.champnet.de"},{name:"kompetenzvernetzung"},{name:"netzwerkkompetenzen"},{name:"www.in-k-ha.de"},{name:"www.openorganisation.de"},{name:"www.arkoh.de"},{name:"www.plug-and-learn.org"},{name:"transdemo-projekt.de"},{name:"kompetenzmanagment"},{name:"kernkompetenzen"},{name:"www.transdemo-projekt.de"},{name:"www.4c4learn.de"},{name:"kompetenzorientiertes"},{name:"www.alfaclu.net"},{name:"kompetenzbedarfe"},{name:"kompetenzbündel"},{name:"www.brofessio.uni-bremen.de"},{name:"www.alfa-agrar.de"},{name:"www.strakosphere.de"},{name:"kompetenznetzwerk"},{name:"www.pm-kompare.de"},{name:"innovationskompetenzen"},{name:"umsetzungskompetenz"},{name:"kompetenzbedingte"},{name:"kompetenzentwicklungs"},{name:"kompetenzdefiziten"},{name:"kompetenzdiagnose"},{name:"kompetenzmodellierung"},{name:"innovationskompetenz"},{name:"www.erziehungswissenschaft.uni-wuppertal.de"},{name:"technikkompetenz"},{name:"systemkompetenz"},{name:"www.abeko.lfo.tu-dortmund.de"},{name:"kompetenzmodell"},{name:"kompetenzmodelle"},{name:"kompetenzmodulen"},{name:"kernkompetenzenansatz"},{name:"kompetenzzentrum"},{name:"akip-projekt.de"},{name:"kompetenzaktivierung"},{name:"kompetenzmanagements"},{name:"www.prokom-4-0.de"},{name:"schlüsselkompetenzen"},{name:"kompetenzträgern"},{name:"kompetenzanforderungen"},{name:"kompetenzverfügbarkeit"},{name:"kompetenzdefizite"},{name:"kompetenzquellen"},{name:"improjects.uni-koblenz.de"},{name:"reputationskompetenz"},{name:"www.handelkompetent.de"},{name:"www.engage-projekt.de"},{name:"gesundheitskompetenzen"},{name:"kompetenzaustausch"},{name:"kompetenzerwerb"},{name:"kompetenzträger"},{name:"kompetenzverlust"},{name:"sprachkompetenz"},{name:"kompetenzmessung"},{name:"kompetenzprofilen"},{name:"kompetenzerweiterung"},{name:"kompetenzfelder"},{name:"kompetenzentwicklungsmaßnahmen"},{name:"kompetenzlücken"},{name:"europakompetenz"},{name:"handlungskompetenz"},{name:"fachkompetenz"},{name:"kompetenzinitiative"},{name:"kompetenzbegriff"},{name:"www.bepeso.de"},{name:"kompetenzpaten"},{name:"kompetenzregion"},{name:"kompetenzfeld"},{name:"www.resilire.de"},{name:"kompetenznutzung"},{name:"www.facharztplus.info"},{name:"kompetenzkontinuität"},{name:"kompetenzarten"},{name:"netzwerkkompetenz"},{name:"kompetenznetzwerkes"},{name:"kompetenzentwicklungskonzept"},{name:"engpasskompetenzen"},{name:"projekt-staysmart.de"},{name:"kompetenzbeschreibung"},{name:"sundheitskompetenz"},{name:"gestaltungskompetenzen"},{name:"gestaltungskompetenz"},{name:"kompetenzprofil"},{name:"kompetenzsicherung"},{name:"kompetenzorientierten"},{name:"umsetzungskompetenzen"},{name:"www.pikoma.info"},{name:"kompetenzprofile"},{name:"kompetenznetzwerks"},{name:"kompetenzmanagementplattform"},{name:"kompetenzmanagementsystem"},{name:"kompetenzaufbau"},{name:"kompetenzentwicklungsprogramms"},{name:"kompetenzelemente"},{name:"kompetenzentwicklungspolitik"},{name:"kompetenzrelevanten"},{name:"kompetenzentwicklungsprozess"},{name:"kernkompetenzansatz"},{name:"kompetenzbestände"},{name:"kompetenzbereiche"},{name:"kompetenzbasierte"},{name:"kompetenzengpässen"},{name:"ausgangskompetenz"},{name:"kompetenzwicklung"},{name:"kompetenzstrukturen"},{name:"inkompetenz"},{name:"kompetenzengpässe"},{name:"koordinationskompetenz"},{name:"kompetenzmanagementassistenzsystem"},{name:"kompetenzmanagementassistenzsystems"},{name:"kompetenzprofiles"},{name:"gesundheitskompetenz"},{name:"kompetenzbedarfen"},{name:"kompetenzvermittlungsmethoden"},{name:"kompetenzvermittlung"},{name:"kompetenzbilanzierung"},{name:"kompetenzentwicklungskonzepten"},{name:"kompetenzmodells"},{name:"kompetenzerfassung"},{name:"kompetenzzentren"},{name:"www.lernen-durch-arbeit.de"},{name:"kompetenzentwicklungsdiskurs"},{name:"kompetenzförderung"},{name:"erholungskompetenzen"},{name:"beziehungskompetenz"},{name:"kompetenzmaßnahmen"},{name:"kompetenzfeststellung"},{name:"kompetenznut"},{name:"medienkompetenz"},{name:"kompetenzeinschätzungen"},{name:"kompetenzmatrix"},{name:"kompetenzbeurteilung"},{name:"kompetenzentwicklungsbedarf"},{name:"kompetenzpotenzialen"},{name:"tungskompetenz"},{name:"fachkompetenzen"},{name:"kompetenzbasierten"},{name:"kompetenzbasierter"},{name:"digitalisierungskompetenz"},{name:"kompetenzanalyse"},{name:"organisationskompetenzen"},{name:"kompetenzmanagementansatz"},{name:"kompetenzlandschaft"},{name:"kompetenzlandkarte"},{name:"prozesskompetenz"},{name:"kompetenzgenerierung"},{name:"kompetenztransfers"},{name:"vernetzungskompetenzen"},{name:"kompetenzmanagementkonzepts"},{name:"kompetenzmodule"},{name:"kompetenzdienstleistungen"},{name:"kompetenznetzwerke"},{name:"kompetenzanalysen"},{name:"kompetenzmanagementmodell"},{name:"kompetenzmanagementsysteme"},{name:"kompetenzentwicklungsbegleiter"},{name:"kompetenzentwicklungsbegleitung"},{name:"kompetenzentwickler"},{name:"kompetenzentwicklungsbedarfe"},{name:"kompetenznetzwerken"},{name:"kompetenzorientierung"},{name:"erziehungskompetenz"},{name:"textüberarbeitungskompetenz"},{name:"auftrittskompetenz"},{name:"selbstkompetenz"},{name:"sprachkompetenzen"},{name:"kompetenzforschung"},{name:"kompetenzentwicklungsprozesse"},{name:"kompetenzentwicklungsprogramme"},{name:"kompetenzbedarf"},{name:"kernkompetenz"},{name:"produktionskompetenzen"},{name:"kompetenzfeldern"},{name:"kompetenzmanage"},{name:"kompetenzstrukturmodell"},{name:"sozialkompetenzen"},{name:"kompetenzdiagnostik"},{name:"kompetenzentwicklungsangeboten"},{name:"forschungskompetenz"},{name:"kompetenzbedarfsanalyse"},{name:"kompetenzbereichen"},{name:"integrationskompetenzen"},{name:"kompetenzmessmodell"},{name:"kompetenzerfassungsinstrument"},{name:"handlungskompetenzen"},{name:"kompetenzerfassungsinstruments"},{name:"gesundheitskompetenzregion"}],edges: [{source: 0, target: 1},{source: 2, target: 3},{source: 2, target: 4},{source: 5, target: 1},{source: 6, target: 1},{source: 7, target: 1},{source: 8, target: 1},{source: 9, target: 10},{source: 0, target: 11},{source: 12, target: 10},{source: 13, target: 14},{source: 15, target: 16},{source: 2, target: 17},{source: 18, target: 1},{source: 19, target: 1},{source: 20, target: 1},{source: 9, target: 21},{source: 22, target: 1},{source: 8, target: 21},{source: 2, target: 23},{source: 0, target: 24},{source: 0, target: 25},{source: 0, target: 26},{source: 0, target: 27},{source: 12, target: 21},{source: 5, target: 28},{source: 15, target: 29},{source: 0, target: 30},{source: 31, target: 32},{source: 0, target: 33},{source: 34, target: 35},{source: 13, target: 36},{source: 8, target: 37},{source: 0, target: 38},{source: 0, target: 39},{source: 12, target: 1},{source: 12, target: 39},{source: 9, target: 39},{source: 40, target: 41},{source: 7, target: 16},{source: 7, target: 42},{source: 43, target: 1},{source: 31, target: 1},{source: 2, target: 44},{source: 2, target: 45},{source: 5, target: 36},{source: 8, target: 46},{source: 0, target: 47},{source: 0, target: 48},{source: 0, target: 49},{source: 50, target: 51},{source: 34, target: 1},{source: 52, target: 1},{source: 9, target: 1},{source: 53, target: 54},{source: 15, target: 55},{source: 15, target: 56},{source: 6, target: 57},{source: 6, target: 58},{source: 31, target: 59},{source: 0, target: 60},{source: 0, target: 61},{source: 20, target: 42},{source: 2, target: 62},{source: 9, target: 63},{source: 40, target: 1},{source: 5, target: 64},{source: 5, target: 65},{source: 5, target: 42},{source: 19, target: 42},{source: 13, target: 42},{source: 13, target: 16},{source: 13, target: 1},{source: 31, target: 66},{source: 0, target: 67},{source: 0, target: 68},{source: 0, target: 69},{source: 0, target: 70},{source: 71, target: 1},{source: 34, target: 46},{source: 52, target: 72},{source: 12, target: 63},{source: 9, target: 73},{source: 9, target: 74},{source: 75, target: 1},{source: 5, target: 76},{source: 77, target: 78},{source: 15, target: 79},{source: 15, target: 80},{source: 8, target: 81},{source: 0, target: 82},{source: 2, target: 57},{source: 2, target: 83},{source: 84, target: 60},{source: 84, target: 1},{source: 12, target: 73},{source: 12, target: 74},{source: 18, target: 42},{source: 22, target: 85},{source: 53, target: 86},{source: 40, target: 87},{source: 5, target: 88},{source: 5, target: 89},{source: 19, target: 90},{source: 13, target: 91},{source: 13, target: 35},{source: 15, target: 42},{source: 15, target: 92},{source: 15, target: 90},{source: 93, target: 1},{source: 43, target: 46},{source: 8, target: 94},{source: 8, target: 95},{source: 6, target: 96},{source: 6, target: 97},{source: 6, target: 70},{source: 31, target: 98},{source: 0, target: 42},{source: 0, target: 99},{source: 0, target: 100},{source: 0, target: 101},{source: 0, target: 102},{source: 0, target: 103},{source: 0, target: 104},{source: 0, target: 105},{source: 0, target: 106},{source: 0, target: 107},{source: 0, target: 108},{source: 0, target: 98},{source: 0, target: 109},{source: 0, target: 110},{source: 0, target: 111},{source: 0, target: 112},{source: 0, target: 113},{source: 0, target: 94},{source: 0, target: 114},{source: 20, target: 57},{source: 50, target: 76},{source: 34, target: 65},{source: 34, target: 29},{source: 34, target: 16},{source: 34, target: 115},{source: 34, target: 116},{source: 2, target: 11},{source: 52, target: 117},{source: 52, target: 42},{source: 52, target: 118},{source: 18, target: 16},{source: 18, target: 119},{source: 18, target: 120},{source: 18, target: 121},{source: 18, target: 3},{source: 18, target: 98},{source: 75, target: 88},{source: 22, target: 42},{source: 22, target: 122},{source: 22, target: 123},{source: 22, target: 124},{source: 22, target: 39},{source: 22, target: 125},{source: 22, target: 126},{source: 127, target: 128},{source: 127, target: 30},{source: 127, target: 46},{source: 53, target: 129},{source: 53, target: 88},{source: 53, target: 130},{source: 53, target: 46},{source: 40, target: 131},{source: 40, target: 26},{source: 40, target: 61},{source: 40, target: 46},{source: 40, target: 76},{source: 5, target: 132},{source: 5, target: 133},{source: 5, target: 134},{source: 5, target: 135},{source: 5, target: 35},{source: 5, target: 136},{source: 5, target: 137},{source: 5, target: 138},{source: 5, target: 139},{source: 5, target: 140},{source: 5, target: 68},{source: 5, target: 141},{source: 5, target: 142},{source: 19, target: 11},{source: 77, target: 143},{source: 77, target: 107},{source: 77, target: 1},{source: 77, target: 42},{source: 77, target: 144},{source: 77, target: 145},{source: 13, target: 146},{source: 13, target: 147},{source: 13, target: 148},{source: 13, target: 149},{source: 13, target: 97},{source: 13, target: 150},{source: 13, target: 90},{source: 13, target: 39},{source: 13, target: 56},{source: 7, target: 119},{source: 7, target: 67},{source: 7, target: 151},{source: 15, target: 152},{source: 15, target: 76},{source: 15, target: 153},{source: 15, target: 1},{source: 15, target: 154},{source: 15, target: 39},{source: 93, target: 42},{source: 93, target: 142},{source: 93, target: 56},{source: 43, target: 21},{source: 43, target: 155},{source: 43, target: 94},{source: 43, target: 16},{source: 43, target: 42},{source: 8, target: 42},{source: 8, target: 156},{source: 8, target: 157},{source: 8, target: 158},{source: 6, target: 46},{source: 6, target: 159},{source: 6, target: 42},{source: 6, target: 160},{source: 6, target: 161},{source: 31, target: 162},{source: 31, target: 163},{source: 31, target: 164},{source: 31, target: 165},{source: 31, target: 166},{source: 31, target: 167},{source: 31, target: 168},{source: 31, target: 169},{source: 31, target: 170},{source: 31, target: 171},{source: 31, target: 67},{source: 31, target: 172},{source: 31, target: 89},{source: 0, target: 161},{source: 0, target: 35},{source: 0, target: 173},{source: 0, target: 174},{source: 0, target: 175},{source: 0, target: 87},{source: 20, target: 46},{source: 20, target: 176},{source: 20, target: 28},{source: 20, target: 16},{source: 20, target: 159},{source: 20, target: 161},{source: 20, target: 165},{source: 20, target: 177},{source: 20, target: 178},{source: 20, target: 179},{source: 71, target: 35},{source: 71, target: 180},{source: 50, target: 126},{source: 34, target: 42},{source: 34, target: 181},{source: 34, target: 182},{source: 34, target: 183},{source: 34, target: 184},{source: 34, target: 173},{source: 34, target: 185},{source: 34, target: 179},{source: 34, target: 186},{source: 2, target: 187},{source: 2, target: 188},{source: 2, target: 177},{source: 84, target: 14},{source: 84, target: 189},{source: 84, target: 42},{source: 84, target: 120},{source: 84, target: 121},{source: 52, target: 3},{source: 52, target: 125},{source: 52, target: 190},{source: 52, target: 191},{source: 52, target: 94},{source: 52, target: 61},{source: 52, target: 89},{source: 52, target: 192},{source: 12, target: 193},{source: 9, target: 193}]};var praedikate = ["266","53","42","39","36","27","25","22","21","21","16","16","16","15","14","14","14","13","13","13","12","12","12","12","12","11","10","10","9","9","9","8","8","8","8","8","8","8","7","7","7","7","7","7","7","6","6","6","6","6","6","6","6","6","5","5","5","5","5","5","5","5","5","5","5","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","3","3","3","3","3","3","3","3","3","3","3","3","3","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1"];
+        var dataset = { nodes:
+            [
+                {
+                    //0
+                    name: "InDeKo.Navi"
+                },
+                {
+                    //1
+                    name: "Schreibtraining – Entwicklungsprojekt für Studierende der Universität"
+                },
+                {
+                    //2
+                    name: "Entwicklung eines virtuellen IT-Berufs- und Studienorientierungsangebots für Frauen (BeSt F:IT)"
+                },
+                {
+                    //3
+                    name: "Information Literacy Online - Developing Multilingual Open Educational Resources Reflecting Multicultural Aspects (ILO)"
+                },
+                {
+                    //4
+                    name: "Usability-Optimierung durch Log-File-Analysen und Web-Monitioring (ULoFA)"
+                },
+                {
+                    //5
+                    name: "Information Literacy Online - Developing Multilingual Open Educational Resources Reflecting Multicultural Aspects (ILO)"
+                },
+                {
+                    //6
+                    name: "TV-Gehörlosenuntertitel für Kindersendungen"
+                },
+                {
+                    //7
+                    name: "Upgrade IT-Wissen"
+                },
+                {
+                    //8
+                    name: "Kompetenzmanagement"
+                },
+                {
+                    //9
+                    name: "Grundkompetenzen"
+                },
+                {
+                    //10
+                    name: "Kompetenzen"
+                },
+                {
+                    //11
+                    name: "Informationskompetenz"
+                },
+                {
+                    //12
+                    name: "Schlüsselkompetenz"
+                },
+                {
+                    //13
+                    name: "Kompetenz"
+                }
+
+
+
+
+            ],
+            edges: [
+                {
+                    source: 0,
+                    target: 8
+                },
+                {
+                    source: 1,
+                    target: 9
+                },
+                {
+                    source: 1,
+                    target: 10
+                },
+                {
+                    source: 2,
+                    target: 10,
+                }
+            ],
+
+        };
+
+        var praedikate = [];
+
         var colors = d3.scale.category10();
 
 
