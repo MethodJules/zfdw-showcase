@@ -17,7 +17,8 @@
         var linkDistance=200;
         div = (settings.id) ? settings.id : 'visualization';
 
-        var dataset = { nodes:
+       var dataset = Drupal.settings.kompetenz_word_visual.graphdata;
+        /*var dataset = { nodes:
             [
                 {
                     //0
@@ -99,9 +100,9 @@
                 }
             ],
 
-        };
+        };*/
 
-        var praedikate = [];
+        var praedikate = Drupal.settings.kompetenz_word_visual.graphdata.praedikate;
 
         var colors = d3.scale.category10();
 

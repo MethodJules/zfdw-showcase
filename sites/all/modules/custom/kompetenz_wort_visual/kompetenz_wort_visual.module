@@ -26,31 +26,48 @@ function show_network() {
         'id' => 'visualization',
         'type' => 'kompetenz_words',
     );
-
+    getData();
     return d3_draw($network_chart);
 }
 
 function getData() {
     $query = 'SELECT body_value, entity_id AS nid FROM {field_data_body} WHERE bundle = :bundle';
     $result = db_query($query, array(':bundle' => 'projekt',));
-    $projectWords = [];
+    $graphdata = [];
 
     if ($result) {
+        $index = 0;
         foreach ($result as $project) {
             $wordsFound = [];
 
             preg_match_all('/\w*kompetenz\w*/iu', $project->body_value, $wordsFound);
 
             // Array-Format key = gefundenes Kompetenzwort, value = wie oft das Wort im Text vorkommt wurde
-            $wordsFrequency = array_count_values($wordsFound[0]);
+            if ($wordsFound[0]) {
+                $projectTitle = node_load($project->nid)->title;
+                $wordsFrequency = array_count_values($wordsFound[0]);
 
-            $projectWords[$project->nid] = $wordsFrequency;
+                $graphdata[nodes][] = [name => $projectTitle];
+                $projectIndex = $index++;
+
+                foreach ($wordsFrequency as $word => $wordcount) {
+                  // if it's a new 'kompetenz' word, add it as a node
+                  $wordIndex = array_search($word, array_column($graphdata[nodes], name));
+                  if ($wordIndex === false) {
+                    $graphdata[nodes][] = [name => $word];
+                    $wordIndex = $index++;
+                  }
+
+                  $graphdata[edges][] = [source => $projectIndex, target => $wordIndex];
+                  $graphdata[praedikate][] = $wordcount;
+                }
+            }
         }
     }
 
+    drupal_add_js(array('kompetenz_word_visual' => array('graphdata' => $graphdata)), array('type' => 'setting'));
 
-
-    $projects = array_filter($projectWords);
+    /*$projects = array_filter($projectWords);
     $keys = array_keys($projects);
 
 
@@ -66,5 +83,5 @@ function getData() {
     }
 
 
-    return['#markup' => 'Hallo'];
+    return['#markup' => 'Hallo'];*/
 }
