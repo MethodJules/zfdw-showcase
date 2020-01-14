@@ -12,7 +12,7 @@
     Drupal.d3.kompetenz_words = function (select, settings) {
         // Your custom JS.
 
-        var w = 800;
+        var w = 1200;
         var h = 1200;
         var linkDistance=200;
         div = (settings.id) ? settings.id : 'visualization';
