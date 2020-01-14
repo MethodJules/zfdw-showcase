@@ -40,7 +40,7 @@ function getData() {
         foreach ($result as $project) {
             $wordsFound = [];
 
-            preg_match_all('/\w*kompetenz\w*/iu', $project->body_value, $wordsFound);
+            preg_match_all('/[\w-]*kompetenz[\w-]*/iu', $project->body_value, $wordsFound);
 
             // Array-Format key = gefundenes Kompetenzwort, value = wie oft das Wort im Text vorkommt wurde
             if ($wordsFound[0]) {
