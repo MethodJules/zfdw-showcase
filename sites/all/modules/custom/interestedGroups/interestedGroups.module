@@ -217,10 +217,15 @@ function interestedGroups_getInterestedGroups() {
 
 
       $node4 = "../user/login?destination=node/" . $node->nid;
-      $tempString = '<div><h4>Hinweis:</h4><p>Sie können uns hier mitteilen, ob Sie an dieser Veranstaltung interessiert sind oder gerne teilnehmen möchten.
+
+
+      $tempString = '<br><div><h2 class="field-label">Hinweis:</h2><p>Da wir einerseits wissen möchten, mit wie vielen Teilnehmern wir in rechnen können,
+      fragen wir an dieser Stelle ab, ob Sie dabei sein werden. Darüber hinaus ist es aber auch interessant, wer Interesse an dem Thema hat,
+      aber verhindert ist. So bietet sich die Möglichkeit über kurze Berichte über den Termin zu informieren, die Veranstaltung aufzuzeichnen
+      und zu archivieren, über weitere Termine zu informieren und dementsprechend einen Zugang zu diesen Informationen zu etablieren und zu ermöglichen.</p>
       Falls Sie noch nicht im Portal angemeldet oder registriert sind, werden Sie zur Registrierungs-/Anmeldemaske weitergeleitet.
       Ihre Daten werden ausschließlich für die Community-Funktionen des Portals genutzt und nicht an Dritte weitergegeben.
-      Weitere Informationen zum Datenschutz finden Sie <a href="/content/datenschutz">hier</a></p></div>';
+      Weitere Informationen zum Datenschutz finden Sie <a href="/content/datenschutz">hier</a></div><br>';
       $array = array();
       $projectID = interestedGroups_get_projectID();
 
@@ -239,11 +244,11 @@ function interestedGroups_getInterestedGroups() {
 
           if ($r->interested == 1) {
             if ($r->accept != 1) {
-              $tempString .= "<br><br><br><button onclick=\"window.location.href='$node2'\" type=\"button\" id=\"keinInteresse\">Ich bin nicht interessiert </button> ";
+              $tempString .= "<button onclick=\"window.location.href='$node2'\" type=\"button\" id=\"keinInteresse\">Ich bin nicht interessiert </button> ";
             }
           }
           else {
-            $tempString .= "<br><br><br><button onclick=\"window.location.href='$node2'\" type=\"button\" id=\"interesse\">Ich bin interessiert </button> ";
+            $tempString .= "<button onclick=\"window.location.href='$node2'\" type=\"button\" id=\"interesse\">Ich bin interessiert </button> ";
           }
 
           if ($r->accept == 1) {
@@ -259,13 +264,13 @@ function interestedGroups_getInterestedGroups() {
       if (sizeof($array) == 0) {
 
         if (user_is_logged_in()) {
-          $tempString .= "<br><br><br><button onclick=\"window.location.href='$node2'\" type=\"button\" id=\"interesse\">Ich bin interessiert </button> ";
+          $tempString .= "<button onclick=\"window.location.href='$node2'\" type=\"button\" id=\"interesse\">Ich bin interessiert </button> ";
           $tempString .= " <button onclick=\"window . location . href = '$node3'\" type=\"button\" id=\"teilnahme\">Ich nehme teil </button> ";
 
         }
         else {
           //TODO: Anzeigen einer Nachricht, dass man sich erst anmelden muss
-          $tempString .= "<br><br><br><button onclick=\"window.location.href='$node4'\" type=\"button\" id=\"interesse\">Ich bin interessiert </button> ";
+          $tempString .= "<button onclick=\"window.location.href='$node4'\" type=\"button\" id=\"interesse\">Ich bin interessiert </button> ";
           $tempString .= " <button onclick=\"window . location . href = '$node4'\" type=\"button\" id=\"teilnahme\">Ich nehme teil </button> ";
         }
       }
