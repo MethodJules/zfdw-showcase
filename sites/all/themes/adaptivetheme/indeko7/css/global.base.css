@@ -636,9 +636,13 @@ header[role=banner],
 .view-veranstaltungen ul {
   list-style-type: none;
   margin: 0!important;
-  padding: 0 0 0 5px!important;
+  padding: 0 0 0 0!important;
 }
 .view-veranstaltungen li {
   list-style-type: none;
   margin: 0 0 1em !important;
+}
+
+.block-title {
+  font-size: 0.9rem!important;
 }
