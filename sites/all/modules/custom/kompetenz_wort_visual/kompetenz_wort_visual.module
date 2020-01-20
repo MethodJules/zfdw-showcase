@@ -45,16 +45,17 @@ function getData() {
             // Array-Format key = gefundenes Kompetenzwort, value = wie oft das Wort im Text vorkommt wurde
             if ($wordsFound[0]) {
                 $projectTitle = node_load($project->nid)->title;
+                $projectUrl = url('node/' . $project->nid, ['absolute' => TRUE]);
                 $wordsFrequency = array_count_values($wordsFound[0]);
 
-                $graphdata[nodes][] = [name => $projectTitle];
+                $graphdata[nodes][] = [name => $projectTitle, type => 'project', link => $projectUrl];
                 $projectIndex = $index++;
 
                 foreach ($wordsFrequency as $word => $wordcount) {
                   // if it's a new 'kompetenz' word, add it as a node
                   $wordIndex = array_search($word, array_column($graphdata[nodes], name));
                   if ($wordIndex === false) {
-                    $graphdata[nodes][] = [name => $word];
+                    $graphdata[nodes][] = [name => $word, type => 'word'];
                     $wordIndex = $index++;
                   }
 

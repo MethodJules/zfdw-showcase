@@ -149,6 +149,8 @@
         var nodelabels = svg.selectAll(".nodelabel")
             .data(dataset.nodes)
             .enter()
+            .append("a").attr("xlink:href", function(d){return d.link;})
+            .attr({"type":function(d){return d.type;}})
             .append("text")
             .attr({"x":function(d){return d.x;},
                 "y":function(d){return d.y;},

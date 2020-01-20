@@ -622,7 +622,7 @@ header[role=banner],
   display: none;
 }
 
-/* basic calendard blocks fixes */
+/* basic calendar blocks fixes */
 .block-veranstaltungen-block-1 h3 {
   display: inline;
 }
@@ -645,4 +645,9 @@ header[role=banner],
 
 .block-title {
   font-size: 0.9rem!important;
+}
+
+/* D3 kompetenz words styling */
+a[type="word"] {
+  text-decoration: none!important;
 }
